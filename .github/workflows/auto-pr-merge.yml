@@ -45,7 +45,7 @@ jobs:
       # Step 3: Comment if validation failed
       - name: Comment on PR
         if: steps.validate.outputs.should-merge != 'true'
-        uses: your-user-name-here/actions/comment-pr@v1
+        uses: your-user-name-here/actions/comment-on-pr@v1
         with:
           pr-number: ${{ github.event.pull_request.number }}
           files-changed: ${{ steps.validate.outputs.files-changed }}
